@@ -3,7 +3,16 @@
 	%head
 		%title MadMaker website
 		%link{ href: 'css/application.css', rel: 'stylesheet' }
+		%link{ href: 'http://fonts.googleapis.com/css?family=Open+Sans:400,700,800', rel: 'stylesheet', type: 'text/css' }
 	%body
-		%h1 Title
+		= Haml::Engine.new(File.read('dev/_header.haml')).render
 
-		%script{ src: "//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" }
+		= Haml::Engine.new(File.read('dev/_home.haml')).render
+
+		= Haml::Engine.new(File.read('dev/_services.haml')).render
+
+		= Haml::Engine.new(File.read('dev/_work.haml')).render
+
+		= Haml::Engine.new(File.read('dev/_hire_us.haml')).render
+
+		= Haml::Engine.new(File.read('dev/_footer.haml')).render
