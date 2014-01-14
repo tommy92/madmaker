@@ -1,2 +1,14 @@
-%header#header
+%header#header.clearfix
 	.center
+		%h1#logo
+			%a{ href: '/' }
+
+		%nav#nav
+			%ul
+				- ['home', 'service', 'our work', 'connect'].each do |item|
+					- if item == 'home'
+						%li
+							%a.active{ href: '#' }= item
+					- else
+						%li
+							%a{ href: '#' }= item

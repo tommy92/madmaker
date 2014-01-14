@@ -1,3 +1,49 @@
 body {
-	font-family: 'Open Sans';
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	color: #697d92;
+	font-size: 14px;
+}
+
+a {
+	text-decoration: none;
+}
+
+strong { font-weight: 800; }
+
+.slogan {
+	color: #fff;
+	font-size: 60px;
+	text-align: center;
+}
+
+.section-title {
+	font-size: 48px;
+	text-align: center;
+}
+
+#services {
+	.section-title {
+		color: #35495e;
+		line-height: 240px;
+		span { color: #ec563c; }
+	}
+}
+
+#work {
+	.section-title {
+		color: #fff;
+		line-height: 190px;
+	}
+}
+
+#collab {
+	.section-title {
+		color: #35495e;
+	}
+}
+
+#hire-us {
+	.section-title {
+		color: #fff;
+	}
 }

@@ -1,3 +1,10 @@
 .clearfix {
 	@include pie-clearfix;
 }
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1060px;
+	position: relative;
+}
