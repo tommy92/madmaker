@@ -5,10 +5,11 @@
 
 		%nav#nav
 			%ul
-				- ['home', 'service', 'our work', 'connect'].each do |item|
-					- if item == 'home'
-						%li
-							%a.active{ href: '#' }= item
-					- else
-						%li
-							%a{ href: '#' }= item
+				%li
+					%a.active{ href: '#home-bg' } home
+				%li
+					%a{ href: '#services' } service
+				%li
+					%a{ href: '#work' } our work
+				%li
+					%a{ href: '#hire-us' } connect
