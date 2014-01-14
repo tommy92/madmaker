@@ -58,8 +58,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 1060px;
   position: relative; }
 
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url("../fonts/glyphicons-halflings-regular.eot");
+  src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
+
 body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 300;
   color: #697d92;
   font-size: 14px; }
 
@@ -67,7 +73,7 @@ a {
   text-decoration: none; }
 
 strong {
-  font-weight: 800; }
+  font-weight: 700; }
 
 .slogan {
   color: #fff;
@@ -116,7 +122,8 @@ strong {
       #header #nav li a {
         color: #697d92;
         text-transform: uppercase;
-        font-size: 14px; }
+        font-size: 14px;
+        font-weight: 400; }
         #header #nav li a.active {
           color: #fff;
           font-weight: bold; }
@@ -127,8 +134,58 @@ strong {
   background: #23303d url(../images/home-bg.png) no-repeat 50% 60px;
   padding-top: 60px;
   height: 582px; }
-  #home-bg #home-inner {
+  #home-bg .slogan {
     padding-top: 160px; }
+
+.features {
+  margin: 100px 46px 0; }
+  .features .item {
+    width: 220px;
+    display: inline-block;
+    margin: 0 50px;
+    text-align: center;
+    vertical-align: top; }
+    .features .item .picture {
+      width: 60px;
+      height: 60px;
+      display: block;
+      margin: 0 auto;
+      position: relative; }
+      .features .item .picture.green {
+        background-color: #27b99a; }
+        .features .item .picture.green:after {
+          border-right-color: #27b99a;
+          border-top-color: #27b99a; }
+      .features .item .picture.red {
+        background-color: #ec563c; }
+        .features .item .picture.red:after {
+          border-right-color: #ec563c;
+          border-top-color: #ec563c; }
+      .features .item .picture.gray {
+        background-color: #697d92; }
+        .features .item .picture.gray:after {
+          border-right-color: #697d92;
+          border-top-color: #697d92; }
+      .features .item .picture:after {
+        position: absolute;
+        content: "";
+        bottom: -10px;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent; }
+    .features .item .title {
+      color: #e7ebc7;
+      font-size: 24px;
+      line-height: 30px;
+      margin-top: 40px; }
+    .features .item .desc {
+      font-size: 12px;
+      line-height: 16px;
+      font-family: Arial;
+      margin-top: 10px; }
 
 #services {
   background: #e7ebc7 url(../images/services-bg.png) no-repeat 50% 0;
@@ -150,3 +207,62 @@ strong {
 #footer {
   height: 160px;
   background-color: #00a184; }
+
+.hire-us-btn {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  background-color: #ec563c;
+  color: #fff;
+  text-transform: uppercase;
+  position: absolute;
+  top: 9px;
+  right: 59px;
+  padding: 3px 7px 5px 23px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid transparent; }
+  .hire-us-btn .text {
+    padding-right: 16px; }
+  .hire-us-btn:hover {
+    border: 1px solid #f7715a;
+    -webkit-box-shadow: 0 3px 0px #263443;
+    -moz-box-shadow: 0 3px 0px #263443;
+    box-shadow: 0 3px 0px #263443; }
+
+.icon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  .icon.envelope:before {
+    content: "\2709"; }
+
+.custom-icon {
+  background-position: 50% 50%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+  .custom-icon.computer {
+    background: url(../images/icons/computer.png) no-repeat;
+    width: 40px;
+    height: 38px; }
+  .custom-icon.heart {
+    background: url(../images/icons/heart.png) no-repeat;
+    width: 39px;
+    height: 40px; }
+  .custom-icon.wand {
+    background: url(../images/icons/wand.png) no-repeat;
+    width: 40px;
+    height: 40px; }

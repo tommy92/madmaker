@@ -1,0 +1,41 @@
+.icon {
+	position: relative;
+	top: 1px;
+	display: inline-block;
+	font-family: 'Glyphicons Halflings';
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	&.envelope:before {
+	  content: "\2709";
+	}
+}
+
+.custom-icon {
+	background-position: 50% 50%;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+
+	&.computer {
+		background: url(../images/icons/computer.png) no-repeat;
+		width: 40px;
+		height: 38px;
+	}
+
+	&.heart {
+		background: url(../images/icons/heart.png) no-repeat;
+		width: 39px;
+		height: 40px;
+	}
+
+	&.wand {
+		background: url(../images/icons/wand.png) no-repeat;
+		width: 40px;
+		height: 40px;
+	}
+}
