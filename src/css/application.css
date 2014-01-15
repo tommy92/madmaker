@@ -102,20 +102,56 @@ strong {
 
 #header {
   background-color: #23303d;
-  padding-top: 65px; }
+  padding-top: 65px;
+  height: 67px; }
+  #header #header-inner {
+    width: 100%; }
   #header #logo {
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    position: absolute;
+    top: 0;
+    left: 500px;
     background: url(../images/logo.png) no-repeat;
-    margin: 0 auto;
-    width: 60px; }
+    width: 60px;
+    height: 74px; }
     #header #logo a {
       display: block;
       width: 60px;
       height: 74px;
       text-indent: -9000em; }
-  #header #nav {
+  #header #site-name {
+    -webkit-transition: opacity 0.1s ease;
+    -moz-transition: opacity 0.1s ease;
+    -o-transition: opacity 0.1s ease;
+    transition: opacity 0.1s ease;
+    background: url(../images/madmaker-name.png) no-repeat;
+    width: 140px;
+    height: 10px;
     position: absolute;
-    top: 34px;
-    right: 40px; }
+    top: 41px;
+    left: 130px;
+    opacity: 0; }
+  #header .hire-us-btn {
+    opacity: 0;
+    position: absolute;
+    top: 33px;
+    right: 58px; }
+  #header #nav {
+    float: right;
+    margin-top: 32px;
+    margin-right: 0;
+    -webkit-transition: margin-right 0.4s ease;
+    -moz-transition: margin-right 0.4s ease;
+    -o-transition: margin-right 0.4s ease;
+    transition: margin-right 0.4s ease; }
     #header #nav li {
       display: inline;
       margin: 0 16px; }
@@ -129,6 +165,8 @@ strong {
           font-weight: bold; }
         #header #nav li a:hover {
           color: #fff; }
+  #header:hover #site-name {
+    background-position: 0 100%; }
 
 #home-bg {
   background: #23303d url(../images/home-bg.png) no-repeat 50% 60px;
@@ -136,21 +174,20 @@ strong {
   height: 582px; }
   #home-bg .slogan {
     padding-top: 160px; }
+  #home-bg .hire-us-btn {
+    position: absolute;
+    top: 9px;
+    right: 59px; }
 
 .features {
   margin: 100px 46px 0; }
   .features .item {
-    width: 220px;
-    display: inline-block;
-    margin: 0 50px;
-    text-align: center;
-    vertical-align: top; }
+    margin: 0 50px; }
     .features .item .picture {
       width: 60px;
       height: 60px;
       display: block;
-      margin: 0 auto;
-      position: relative; }
+      margin: 0 auto; }
       .features .item .picture.green {
         background-color: #27b99a; }
         .features .item .picture.green:after {
@@ -183,13 +220,25 @@ strong {
       margin-top: 40px; }
     .features .item .desc {
       font-size: 12px;
-      line-height: 16px;
+      line-height: 18px;
       font-family: Arial;
       margin-top: 10px; }
 
+.list .item {
+  width: 220px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top; }
+
 #services {
-  background: #e7ebc7 url(../images/services-bg.png) no-repeat 50% 0;
-  min-height: 300px; }
+  background: #e7ebc7 url(../images/services-bg.png) no-repeat 50% 0; }
+  #services .info-text {
+    color: #b8bc9d;
+    font-size: 24px;
+    padding-left: 42px;
+    background: url(../images/icons/advice.png) no-repeat;
+    margin: 0 auto 42px auto;
+    display: table; }
 
 #work {
   background: #ec563c url(../images/work-bg.png) no-repeat 50% 100%; }
@@ -214,13 +263,9 @@ strong {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  display: inline-block;
   background-color: #ec563c;
   color: #fff;
   text-transform: uppercase;
-  position: absolute;
-  top: 9px;
-  right: 59px;
   padding: 3px 7px 5px 23px;
   font-size: 12px;
   font-weight: 700;
@@ -228,10 +273,83 @@ strong {
   .hire-us-btn .text {
     padding-right: 16px; }
   .hire-us-btn:hover {
-    border: 1px solid #f7715a;
     -webkit-box-shadow: 0 3px 0px #263443;
     -moz-box-shadow: 0 3px 0px #263443;
-    box-shadow: 0 3px 0px #263443; }
+    box-shadow: 0 3px 0px #263443;
+    border: 1px solid #f7715a; }
+
+.services-list {
+  position: relative;
+  margin: 80px 0 70px;
+  min-height: 280px; }
+  .services-list .arrow-bg {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #dbdfbd;
+    width: 40px;
+    height: 280px;
+    position: absolute;
+    top: 0;
+    z-index: 2; }
+    .services-list .arrow-bg:hover {
+      background-color: #ec563c; }
+      .services-list .arrow-bg:hover.arrow-left .arrow {
+        background-position: 0 100%; }
+      .services-list .arrow-bg:hover.arrow-right .arrow {
+        background-position: 100% 100%; }
+    .services-list .arrow-bg.arrow-left {
+      left: 0; }
+      .services-list .arrow-bg.arrow-left .arrow {
+        background-position: 0 0; }
+    .services-list .arrow-bg.arrow-right {
+      right: 0; }
+      .services-list .arrow-bg.arrow-right .arrow {
+        background-position: 100% 0; }
+    .services-list .arrow-bg .arrow {
+      background: url(../images/arrows-services.png) no-repeat;
+      width: 7px;
+      height: 14px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+  .services-list .service-boxes {
+    margin: 0 46px; }
+    .services-list .service-boxes .item {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      border-radius: 5px;
+      border: 5px solid #dbdfbd;
+      background-color: #fff;
+      margin: 0 10px;
+      width: 290px;
+      height: 270px;
+      cursor: pointer; }
+      .services-list .service-boxes .item .picture {
+        width: 100%;
+        height: 111px;
+        position: relative; }
+        .services-list .service-boxes .item .picture .custom-icon {
+          top: initial; }
+      .services-list .service-boxes .item .title {
+        color: #35495e;
+        font-size: 24px;
+        line-height: 50px;
+        font-weight: 400;
+        margin-top: 20px; }
+      .services-list .service-boxes .item .desc {
+        font-size: 14px;
+        line-height: 22px;
+        padding: 0 20px; }
+      .services-list .service-boxes .item:hover {
+        border-color: #465568; }
 
 .icon {
   position: relative;
@@ -246,14 +364,19 @@ strong {
   .icon.envelope:before {
     content: "\2709"; }
 
+.picture {
+  position: relative; }
+
 .custom-icon {
-  background-position: 50% 50%;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0; }
+  display: block; }
+  .custom-icon.total-center {
+    background-position: 50% 50%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
   .custom-icon.computer {
     background: url(../images/icons/computer.png) no-repeat;
     width: 40px;
@@ -266,3 +389,53 @@ strong {
     background: url(../images/icons/wand.png) no-repeat;
     width: 40px;
     height: 40px; }
+  .custom-icon.computer2 {
+    background: url(../images/icons/computer2.png) no-repeat;
+    width: 61px;
+    height: 58px; }
+  .custom-icon.heart2 {
+    background: url(../images/icons/heart2.png) no-repeat;
+    width: 61px;
+    height: 60px; }
+  .custom-icon.document {
+    background: url(../images/icons/document.png) no-repeat;
+    width: 50px;
+    height: 61px; }
+
+#header.fixed-nav #header-inner {
+  -webkit-box-shadow: 0 5px 0 rgba(15, 21, 32, 0.2);
+  -moz-box-shadow: 0 5px 0 rgba(15, 21, 32, 0.2);
+  box-shadow: 0 5px 0 rgba(15, 21, 32, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  height: 90px;
+  padding-top: 0;
+  background-color: #0f1520; }
+  #header.fixed-nav #header-inner #logo {
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -o-transform: scale(0.7);
+    transform: scale(0.7);
+    position: absolute;
+    top: 9px;
+    left: 60px; }
+  #header.fixed-nav #header-inner #site-name {
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+    opacity: 1; }
+  #header.fixed-nav #header-inner #nav {
+    margin-top: 39px; }
+#header.show-btn #nav {
+  margin-right: 202px; }
+#header.show-btn .hire-us-btn {
+  -webkit-transition: opacity 0.5s ease;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition: opacity 0.5s ease 0.2s;
+  -o-transition: opacity 0.5s ease 0.2s;
+  transition: opacity 0.5s ease 0.2s;
+  opacity: 1; }

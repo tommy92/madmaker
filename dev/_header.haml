@@ -1,15 +1,22 @@
 %header#header.clearfix
-	.center
-		%h1#logo
-			%a{ href: '/' }
+	#header-inner
+		.center
+			%h1#logo.total-center
+				%a{ href: '/' } MadMaker
 
-		%nav#nav
-			%ul
-				%li
-					%a.active{ href: '#home-bg' } home
-				%li
-					%a{ href: '#services' } service
-				%li
-					%a{ href: '#work' } our work
-				%li
-					%a{ href: '#hire-us' } connect
+			%a#site-name{ href: '/' }
+
+			%a.hire-us-btn{ href: '#' }
+				%span.text Hire us now
+				%span.icon.envelope
+
+			%nav#nav
+				%ul
+					%li
+						%a.active{ href: '#header' } home
+					%li
+						%a{ href: '#services' } service
+					%li
+						%a{ href: '#work' } our work
+					%li
+						%a{ href: '#hire-us' } connect

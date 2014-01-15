@@ -1,11 +1,21 @@
 #header {
 	background-color: #23303d;
 	padding-top: 65px;
+	height: 67px;
+
+	#header-inner {
+		width: 100%;
+	}
 
 	#logo {
+		@include transition(all .4s ease);
+		@include transform( scale(1) );
+		position: absolute;
+		top: 0;
+		left: 500px;
 		background: url(../images/logo.png) no-repeat;
-		margin: 0 auto;
 		width: 60px;
+		height: 74px;
 
 		a {
 			display: block;
@@ -15,10 +25,29 @@
 		}
 	}
 
-	#nav {
+	#site-name {
+		@include transition(opacity .1s ease);
+		background: url(../images/madmaker-name.png) no-repeat;
+		width: 140px;
+		height: 10px;
 		position: absolute;
-		top: 34px;
-		right: 40px;
+		top: 41px;
+		left: 130px;
+		opacity: 0;
+	}
+
+	.hire-us-btn {
+		opacity: 0;
+		position: absolute;
+		top: 33px;
+		right: 58px;
+	}
+
+	#nav {
+		float: right;
+		margin-top: 32px;
+		margin-right: 0;
+		@include transition(margin-right .4s ease);
 
 		li {
 			display: inline;
@@ -39,6 +68,10 @@
 			}
 		}
 	}
+
+	&:hover {
+		#site-name { background-position: 0 100%; }
+	}
 }
 
 #home-bg {
@@ -49,28 +82,27 @@
 	#home-inner {}
 
 	.slogan { padding-top: 160px; }
+	.hire-us-btn {
+		position: absolute;
+		top: 9px;
+		right: 59px;
+	}
 }
 
 .features {
 	margin: 100px 46px 0;
 
 	.item {
-		width: 220px;
-		display: inline-block;
 		margin: 0 50px;
-		text-align: center;
-		vertical-align: top;
 
 		.picture {
 			width: 60px;
 			height: 60px;
 			display: block;
 			margin: 0 auto;
-			position: relative;
 
 			&.green {
 				background-color: #27b99a;
-
 				&:after {
 	    		border-right-color: #27b99a;
 	    		border-top-color: #27b99a;
@@ -113,20 +145,36 @@
 
 		.desc {
 			font-size: 12px;
-			line-height: 16px;
+			line-height: 18px;
 			font-family: Arial;
 			margin-top: 10px;
 		}
 	}
 }
 
+.list {
+	.item {
+		width: 220px;
+		display: inline-block;
+		text-align: center;
+		vertical-align: top;
+	}
+}
 
 
 #services {
 	background: #e7ebc7 url(../images/services-bg.png) no-repeat 50% 0;
-	min-height: 300px;
 
 	#services-inner {}
+
+	.info-text {
+		color: #b8bc9d;
+		font-size: 24px;
+		padding-left: 42px;
+		background: url(../images/icons/advice.png) no-repeat;
+		margin: 0 auto 42px auto;
+		display: table;
+	}
 }
 
 #work {
@@ -157,26 +205,114 @@
 
 .hire-us-btn {
 	@include border-radius(3px);
-	display: inline-block;
 	background-color: #ec563c;
 	color: #fff;
 	text-transform: uppercase;
-	position: absolute;
-	top: 9px;
-	right: 59px;
 	padding: 3px 7px 5px 23px;
 	font-size: 12px;
 	font-weight: 700;
-
 	border: 1px solid transparent;
 
-	.text {
-		padding-right: 16px;
-	}
+	.text { padding-right: 16px; }
 
 	&:hover {
-		border: 1px solid #f7715a;
 		@include box-shadow(0 3px 0px #263443);
+		border: 1px solid #f7715a;
 	}
 }
 
+.services-list {
+	position: relative;
+	margin: 80px 0 70px;
+	min-height: 280px;
+
+	.arrow-bg {
+		@include border-radius(5px);
+		background-color: #dbdfbd;
+		width: 40px;
+		height: 280px;
+		position: absolute;
+		top: 0;
+		z-index: 2;
+
+		&:hover {
+			background-color: #ec563c;
+			&.arrow-left {
+				.arrow {
+					background-position: 0 100%;
+				}
+			}
+			&.arrow-right {
+				.arrow {
+					background-position: 100% 100%;
+				}
+			}
+		}
+
+		&.arrow-left {
+			left: 0;
+
+			.arrow {
+				background-position: 0 0;
+			}
+		}
+
+		&.arrow-right {
+			right: 0;
+
+			.arrow {
+				background-position: 100% 0;
+			}
+		}
+
+		.arrow {
+			background: url(../images/arrows-services.png) no-repeat;
+			width: 7px;
+			height: 14px;
+			margin: auto;
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+		}
+	}
+
+	.service-boxes {
+		margin: 0 46px;
+
+		.item {
+			@include border-radius(5px);
+			border: 5px solid #dbdfbd;
+			background-color: #fff;
+			margin: 0 10px;
+			width: 290px;
+			height: 270px;
+			cursor: pointer;
+
+			.picture {
+				width: 100%;
+				height: 111px;
+				position: relative;
+
+				.custom-icon{ top: initial; }
+			}
+
+			.title {
+				color: #35495e;
+				font-size: 24px;
+				line-height: 50px;
+				font-weight: 400;
+				margin-top: 20px;
+			}
+
+			.desc {
+				font-size: 14px;
+				line-height: 22px;
+				padding: 0 20px;
+			}
+
+			&:hover {
+				border-color: #465568;
+			}
+		}
+	}
+
+}

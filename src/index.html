@@ -7,26 +7,33 @@
   </head>
   <body>
     <header class='clearfix' id='header'>
-      <div class='center'>
-        <h1 id='logo'>
-          <a href='/'></a>
-        </h1>
-        <nav id='nav'>
-          <ul>
-            <li>
-              <a class='active' href='#home-bg'>home</a>
-            </li>
-            <li>
-              <a href='#services'>service</a>
-            </li>
-            <li>
-              <a href='#work'>our work</a>
-            </li>
-            <li>
-              <a href='#hire-us'>connect</a>
-            </li>
-          </ul>
-        </nav>
+      <div id='header-inner'>
+        <div class='center'>
+          <h1 class='total-center' id='logo'>
+            <a href='/'>MadMaker</a>
+          </h1>
+          <a href='/' id='site-name'></a>
+          <a class='hire-us-btn' href='#'>
+            <span class='text'>Hire us now</span>
+            <span class='icon envelope'></span>
+          </a>
+          <nav id='nav'>
+            <ul>
+              <li>
+                <a class='active' href='#header'>home</a>
+              </li>
+              <li>
+                <a href='#services'>service</a>
+              </li>
+              <li>
+                <a href='#work'>our work</a>
+              </li>
+              <li>
+                <a href='#hire-us'>connect</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
     <section class='clearfix' id='home-bg'>
@@ -39,29 +46,29 @@
           We will create
           <strong>your brand</strong>
         </h1>
-        <div class='features'>
-          <div class='item'>
+        <ul class='features list'>
+          <li class='item'>
             <div class='picture green'>
-              <span class='custom-icon computer'></span>
+              <span class='custom-icon total-center computer'></span>
             </div>
             <h3 class='title'>Responsive Design</h3>
             <p class='desc'>Curabitur blandit, magna nec euismod tincidunt, odio mauris pellentesque.</p>
-          </div>
-          <div class='item'>
+          </li>
+          <li class='item'>
             <div class='picture red'>
-              <span class='custom-icon heart'></span>
+              <span class='custom-icon total-center heart'></span>
             </div>
             <h3 class='title'>Clean Design</h3>
             <p class='desc'>Curabitur blandit, magna nec euismod tincidunt, odio mauris pellentesque.</p>
-          </div>
-          <div class='item'>
+          </li>
+          <li class='item'>
             <div class='picture gray'>
-              <span class='custom-icon wand'></span>
+              <span class='custom-icon total-center wand'></span>
             </div>
             <h3 class='title'>Incredible Features</h3>
             <p class='desc'>Curabitur blandit, magna nec euismod tincidunt, odio mauris pellentesque.</p>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </section>
     <section class='clearfix' id='services'>
@@ -72,6 +79,41 @@
             <strong>Services</strong>
           </span>
         </h2>
+        <section class='services-list'>
+          <a class='arrow-bg arrow-left' href='#'>
+            <i class='arrow'></i>
+          </a>
+          <a class='arrow-bg arrow-right' href='#'>
+            <i class='arrow'></i>
+          </a>
+          <ul class='list service-boxes'>
+            <li class='item'>
+              <div class='picture'>
+                <span class='custom-icon total-center computer2'></span>
+              </div>
+              <h3 class='title'>Webdesign</h3>
+              <p class='desc'>All the info everybody needs to wow your customers is always right at your fingertips.</p>
+            </li>
+            <li class='item'>
+              <div class='picture'>
+                <span class='custom-icon total-center heart2'></span>
+              </div>
+              <h3 class='title'>Icon design</h3>
+              <p class='desc'>All the info everybody needs to wow your customers is always right at your fingertips.</p>
+            </li>
+            <li class='item'>
+              <div class='picture'>
+                <span class='custom-icon total-center document'></span>
+              </div>
+              <h3 class='title'>HTML5 + CSS3</h3>
+              <p class='desc'>All the info everybody needs to wow your customers is always right at your fingertips.</p>
+            </li>
+          </ul>
+        </section>
+        <p class='info-text'>
+          Click on the box to read more about
+          <strong>our services.</strong>
+        </p>
       </div>
     </section>
     <section class='clearfix' id='work'>
