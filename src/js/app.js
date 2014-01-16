@@ -1,25 +1,33 @@
 (function() {
   $(function() {
-    var $headerEl, $rootEl;
+    var $headerEl, $homeElHeight, $rootEl;
     $rootEl = $('html, body');
     $headerEl = $('#header');
-    $('#nav a').click(function() {
+    $homeElHeight = $('#home').outerHeight();
+    $('#nav a, .js-link-to').click(function() {
       $rootEl.animate({
         scrollTop: $($(this).attr('href')).offset().top - 90
       }, 500);
       return false;
     });
-    return $(window).scroll(function() {
+    $(window).on('scroll', function() {
       if ($(window).scrollTop() > 57) {
         $headerEl.addClass('fixed-nav');
       } else {
         $headerEl.removeClass('fixed-nav');
       }
-      if ($(window).scrollTop() > 570) {
+      if ($(window).scrollTop() > $homeElHeight) {
         return $headerEl.addClass('show-btn');
       } else {
         return $headerEl.removeClass('show-btn');
       }
+    });
+    return $(window).load(function() {
+      return $('#slider').flexslider({
+        controlNav: false,
+        prevText: '',
+        nextText: ''
+      });
     });
   });
 

@@ -1,0 +1,55 @@
+#slider {
+	margin-top: 44px;
+	position: relative;
+
+	.description {
+		background: url(../images/slider-desc-bg.gif) no-repeat;
+		width: 1070px;
+		height: 143px;
+		margin: 0 -5px;
+		padding: 43px 55px 0 60px;
+		@include box-sizing(border-box);
+
+		.customer-logo {
+			zoom: 1;
+			width: auto;
+			height: auto;
+			padding-top: 8px;
+			display: inline;
+			margin-right: 114px;
+			float: left;
+		}
+
+		.content {
+			display: inline-block;
+			width: 650px;
+
+			.customer-name {
+				color: #ec563c;
+				font-size: 24px;
+				display: block;
+				margin-bottom: 5px;
+				font-weight: 400;
+			}
+
+			.customer-quotation {
+				display: block;
+				color: #697d92;
+				font-size: 18px;
+				line-height: 25px;
+			}
+		}
+
+		.redirect-to {
+			background: url(../images/redirect-to.gif) no-repeat;
+			width: 50px;
+			height: 41px;
+			display: inline-block;
+			vertical-align: top;
+
+			&:hover {
+				background-position: 0 100%;
+			}
+		}
+	}
+}
