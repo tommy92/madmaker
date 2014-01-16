@@ -58,6 +58,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 1060px;
   position: relative; }
 
+.align-center {
+  text-align: center; }
+
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url("../fonts/glyphicons-halflings-regular.eot");
@@ -96,11 +99,25 @@ strong {
 
 #collab .section-title {
   color: #35495e;
-  margin-top: 245px;
-  font-weight: 400; }
+  margin-top: 235px;
+  font-weight: 400;
+  line-height: 60px; }
 
 #hire-us .section-title {
-  color: #fff; }
+  color: #fff;
+  margin-top: 80px; }
+
+.copyrights {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 130px; }
+  .copyrights .copyright-sign {
+    font-weight: 300;
+    color: #8ed1be; }
+  .copyrights .rights {
+    font-weight: 300;
+    color: #e7ebc7; }
 
 #header {
   background-color: #23303d;
@@ -261,14 +278,14 @@ strong {
 
 #collab {
   background-color: #fff;
-  height: 500px; }
+  height: 200px; }
 
 #hire-us {
   background-color: #27b99a;
   height: 500px; }
 
 #footer {
-  height: 160px;
+  height: 130px;
   background-color: #00a184; }
 
 .hire-us-btn {
@@ -364,6 +381,32 @@ strong {
         padding: 0 20px; }
       .services-list .service-boxes .item:hover {
         border-color: #465568; }
+
+.beak {
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-top: 10px solid #fff;
+  margin: 0 auto; }
+
+.go-to-top {
+  position: absolute;
+  top: 53px;
+  right: 0; }
+  .go-to-top span {
+    background: url(../images/go-top-arrow.gif) no-repeat;
+    width: 26px;
+    height: 26px;
+    display: block;
+    padding-left: 42px;
+    width: 80px;
+    line-height: 26px;
+    color: #e7ebc7;
+    font-weight: 700; }
+  .go-to-top:hover span {
+    background-position: 0 100%;
+    color: #fff; }
 
 .icon {
   position: relative;

@@ -198,7 +198,7 @@
 
 #collab {
 	background-color: #fff;
-	height: 500px;
+	height: 200px;
 }
 
 #hire-us {
@@ -210,7 +210,7 @@
 }
 
 #footer {
-	height: 160px;
+	height: 130px;
 	background-color: #00a184;
 }
 
@@ -328,4 +328,38 @@
 		}
 	}
 
+}
+
+.beak {
+	width: 0;
+	height: 0;
+	border-right: 10px solid transparent;
+	border-left: 10px solid transparent;
+	border-top: 10px solid #fff;
+	margin: 0 auto;
+}
+
+.go-to-top {
+	position: absolute;
+	top: 53px;
+	right: 0;
+
+	span {
+		background: url(../images/go-top-arrow.gif) no-repeat;
+		width: 26px;
+		height: 26px;
+		display: block;
+		padding-left: 42px;
+		width: 80px;
+		line-height: 26px;
+		color: #e7ebc7;
+		font-weight: 700;
+	}
+
+	&:hover {
+		span {
+			background-position: 0 100%;
+			color: #fff;
+		}
+	}
 }
